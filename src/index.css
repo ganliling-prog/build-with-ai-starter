@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: var(--tw-border-color, #2a2e39);
+  }
+}
+
+/* Custom TradingView styling touches */
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom sleek scrollbar matching TradingView */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2e39;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #363c4e;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #d1d4dc;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #b2b5be;
+}
+
+/* Subtle price tick flash animations */
+@keyframes flash-green {
+  0% { background-color: rgba(8, 153, 129, 0.35); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-red {
+  0% { background-color: rgba(242, 54, 69, 0.35); }
+  100% { background-color: transparent; }
+}
+
+.animate-flash-up {
+  animation: flash-green 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-flash-down {
+  animation: flash-red 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}

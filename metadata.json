@@ -1,0 +1,6 @@
+{
+  "name": "TradingView Markets - Financial Market Quotes & Charts",
+  "description": "Real-time global financial markets overview, interactive charts, stock screeners, crypto, forex, commodities, and heatmaps inspired by TradingView.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
